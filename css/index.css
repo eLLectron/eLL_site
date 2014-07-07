@@ -122,3 +122,9 @@ footer.inner {
 .twitButton {
 	font-size: 15px;
 }
+
+.aboutPic {
+	float: left;
+	border-radius: 150px;
+	margin-left: 15px;
+}
