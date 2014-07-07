@@ -1,0 +1,120 @@
+@font-face {
+	font-family: 'CD';
+	src: url('../fonts/CaviarDreams.ttf') format('trueType');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bebas';
+	src: url('../fonts/Bebas.ttf') format('trueType');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bellota';
+	src: url('../fonts/Bellota-Regular.otf') format('openType');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Bariol';
+	src: url('../fonts/Bariol_Regular.otf') format('openType');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "Bariol";
+	padding-top: 50px;
+}
+
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+
+#LL {
+	font-weight: bold;
+}
+
+.pt-perspective {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	perspective: 1200px;
+	transform-style: preserve-3d;
+}
+
+.pt-page {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	backface-visibility: hidden;
+	visibility: hidden;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.pt-page-current, .no-js .pt-page {
+	visibility: visible;
+}
+
+.no-js body {
+	overflow: auto;
+}
+
+.pt-page-ontop {
+	z-index: 999;
+}
+
+.pt-page-1 {
+	background-color: #a3e9a4;
+}
+
+.pt-page-2 {
+	background-color: #ffe0b2;
+}
+
+.pt-page-3 {
+	background-color: #ffccbc;
+}
+
+.pt-page-4 {
+	background-color: #d7ccc8;
+}
+
+.pt-page-5 {
+	background-color: #dcedc8;
+}
+
+footer {
+	position: absolute;
+	background-color: #cfd8dc;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	height: 26px;
+}
+
+footer.inner {
+	display: table;
+}
+
+.navbar-brand {
+	font-family: "CD";
+}
+
+.container {
+	text-align: center;
+}
