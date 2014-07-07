@@ -23,7 +23,7 @@ var PageTransitions = (function() {
 		support = Modernizr.cssanimations;
 	
 	function init() {
-		old=current;
+		old = itemClicked;
 		$('.topButton').eq(0).addClass('active');
 
 		$pages.each( function() {
@@ -59,6 +59,7 @@ var PageTransitions = (function() {
 	}
 
 	function nextPage( animation ) {
+		if(old != itemClicked){
 
 		if( isAnimating ) {
 			return false;
@@ -74,8 +75,13 @@ var PageTransitions = (function() {
 			outClass = '', inClass = '';
 			$('.topButton').removeClass('active');
 			$('.topButton').eq(current).addClass('active');
+		if(itemClicked > old) {
 				outClass = 'pt-page-moveToLeft';
 				inClass = 'pt-page-moveFromRight';
+		} else {
+				outClass = 'pt-page-moveToRight';
+				inClass = 'pt-page-moveFromLeft';
+		}
 
 		$currPage.addClass( outClass ).on( animEndEventName, function() {
 			$currPage.off( animEndEventName );
@@ -96,7 +102,8 @@ var PageTransitions = (function() {
 		if( !support ) {
 			onEndAnimation( $currPage, $nextPage );
 		}
-
+		old = itemClicked;
+		}
 	}
 
 	function onEndAnimation( $outpage, $inpage ) {
