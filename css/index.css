@@ -118,3 +118,7 @@ footer.inner {
 .container {
 	text-align: center;
 }
+
+.twitButton {
+	font-size: 15px;
+}
