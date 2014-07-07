@@ -125,6 +125,8 @@ footer.inner {
 
 .aboutPic {
 	float: left;
+	width: 120px;
+	heught: 120px;
 	border-radius: 150px;
 	margin-left: 15px;
 }
